@@ -28,7 +28,7 @@ windows-terminal-config/
 ### 1. Clone This Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/windows-terminal-config.git
+git clone https://github.com/lazy-blake/windows-terminal-config.git
 cd windows-terminal-config
 ```
 

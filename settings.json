@@ -1,0 +1,210 @@
+{
+  "$help": "https://aka.ms/terminal-documentation",
+  "$schema": "https://aka.ms/terminal-profiles-schema",
+  "actions": [],
+  "alwaysShowNotificationIcon": false,
+  "centerOnLaunch": true,
+  "copyFormatting": "none",
+  "copyOnSelect": false,
+  "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+  "initialCols": 100,
+  "initialRows": 30,
+  "keybindings": [
+    { "id": "Terminal.CopyToClipboard", "keys": "ctrl+c" },
+    { "id": "Terminal.FindText", "keys": "ctrl+shift+f" },
+    { "id": "Terminal.PasteFromClipboard", "keys": "ctrl+v" },
+    { "id": "Terminal.DuplicatePaneAuto", "keys": "alt+shift+d" }
+  ],
+  "newTabMenu": [{ "type": "remainingProfiles" }],
+  "profiles": {
+    "defaults": {
+      "antialiasingMode": "grayscale",
+      "colorScheme": "xcad",
+      "experimental.retroTerminalEffect": false,
+      "experimental.rightClickContextMenu": true,
+      "font": {
+        "face": "FiraCode Nerd Font Mono"
+      },
+      "opacity": 82,
+      "useAcrylic": true
+    },
+    "list": [
+      {
+        "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+        "hidden": false,
+        "name": "Windows PowerShell"
+      },
+      {
+        "commandline": "%SystemRoot%\\System32\\cmd.exe",
+        "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+        "hidden": false,
+        "name": "Command Prompt"
+      },
+      {
+        "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+        "hidden": false,
+        "name": "Azure Cloud Shell",
+        "source": "Windows.Terminal.Azure"
+      },
+      {
+        "guid": "{016ced58-4b35-548c-8504-deb1bffdd355}",
+        "hidden": false,
+        "name": "Developer Command Prompt for VS 2019",
+        "source": "Windows.Terminal.VisualStudio"
+      },
+      {
+        "guid": "{41c0f24d-e82d-5031-9b0d-d2bdbd237efd}",
+        "hidden": false,
+        "name": "Developer PowerShell for VS 2019",
+        "source": "Windows.Terminal.VisualStudio"
+      },
+      {
+        "guid": "{1bfb9d17-0a68-58ce-b265-935611b7b7fd}",
+        "hidden": false,
+        "name": "Developer Command Prompt for VS 2022",
+        "source": "Windows.Terminal.VisualStudio"
+      },
+      {
+        "guid": "{b3e9f5b9-9258-5558-9f38-14dd5dcab818}",
+        "hidden": false,
+        "name": "Developer PowerShell for VS 2022",
+        "source": "Windows.Terminal.VisualStudio"
+      },
+      {
+        "commandline": "%WINDIR%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -ExecutionPolicy ByPass -NoExit -Command \"& '$env:USERPROFILE\\anaconda3\\shell\\condabin\\conda-hook.ps1' ; conda activate '$env:USERPROFILE\\anaconda3' \"",
+        "name": "Anaconda PowerShell Prompt (anaconda3)",
+        "icon": "$env:USERPROFILE\\anaconda3\\Menu\\anaconda_powershell_prompt.ico",
+        "startingDirectory": "$env:USERPROFILE"
+      },
+      {
+        "commandline": "%WINDIR%\\System32\\cmd.exe \"/K\" $env:USERPROFILE\\anaconda3\\Scripts\\activate.bat $env:USERPROFILE\\anaconda3",
+        "name": "Anaconda Prompt (anaconda3)",
+        "icon": "$env:USERPROFILE\\anaconda3\\Menu\\anaconda_prompt.ico",
+        "startingDirectory": "$env:USERPROFILE"
+      }
+    ]
+  },
+  "rendering.disablePartialInvalidation": true,
+  "rendering.graphicsAPI": "direct3d11",
+  "schemes": [
+    {
+      "name": "Ciapre",
+      "background": "#191C27",
+      "foreground": "#AEA47A",
+      "cursorColor": "#92805B",
+      "selectionBackground": "#172539",
+      "black": "#181818",
+      "red": "#810009",
+      "green": "#48513B",
+      "yellow": "#CC8B3F",
+      "blue": "#576D8C",
+      "purple": "#724D7C",
+      "cyan": "#5C4F4B",
+      "white": "#AEA47F",
+      "brightBlack": "#555555",
+      "brightRed": "#AC3835",
+      "brightGreen": "#A6A75D",
+      "brightYellow": "#DCDF7C",
+      "brightBlue": "#3097C6",
+      "brightPurple": "#D33061",
+      "brightCyan": "#F3DBB2",
+      "brightWhite": "#F4F4F4"
+    },
+    {
+      "name": "Color Scheme 15",
+      "background": "#000000",
+      "foreground": "#FFFFFF",
+      "cursorColor": "#FFFFFF",
+      "selectionBackground": "#FFFFFF",
+      "black": "#0C0C0C",
+      "red": "#C50F1F",
+      "green": "#13A10E",
+      "yellow": "#C19C00",
+      "blue": "#0037DA",
+      "purple": "#881798",
+      "cyan": "#3A96DD",
+      "white": "#CCCCCC",
+      "brightBlack": "#767676",
+      "brightRed": "#E74856",
+      "brightGreen": "#16C60C",
+      "brightYellow": "#F9F1A5",
+      "brightBlue": "#3B78FF",
+      "brightPurple": "#B4009E",
+      "brightCyan": "#61D6D6",
+      "brightWhite": "#F2F2F2"
+    },
+    {
+      "name": "Dracula",
+      "background": "#282A36",
+      "foreground": "#F8F8F2",
+      "cursorColor": "#F8F8F2",
+      "selectionBackground": "#44475A",
+      "black": "#21222C",
+      "red": "#FF5555",
+      "green": "#50FA7B",
+      "yellow": "#F1FA8C",
+      "blue": "#BD93F9",
+      "purple": "#FF79C6",
+      "cyan": "#8BE9FD",
+      "white": "#F8F8F2",
+      "brightBlack": "#6272A4",
+      "brightRed": "#FF6E6E",
+      "brightGreen": "#69FF94",
+      "brightYellow": "#FFFFA5",
+      "brightBlue": "#D6ACFF",
+      "brightPurple": "#FF92DF",
+      "brightCyan": "#A4FFFF",
+      "brightWhite": "#FFFFFF"
+    },
+    {
+      "name": "One Half Dark (Copy)",
+      "background": "#282C34",
+      "foreground": "#DCDFE4",
+      "cursorColor": "#FFFFFF",
+      "selectionBackground": "#FFFFFF",
+      "black": "#282C34",
+      "red": "#E06C75",
+      "green": "#98C379",
+      "yellow": "#E5C07B",
+      "blue": "#61AFEF",
+      "purple": "#C678DD",
+      "cyan": "#56B6C2",
+      "white": "#DCDFE4",
+      "brightBlack": "#5A6374",
+      "brightRed": "#E06C75",
+      "brightGreen": "#98C379",
+      "brightYellow": "#E5C07B",
+      "brightBlue": "#61AFEF",
+      "brightPurple": "#C678DD",
+      "brightCyan": "#56B6C2",
+      "brightWhite": "#DCDFE4"
+    },
+    {
+      "name": "xcad",
+      "background": "#0B0F18",
+      "foreground": "#F1F1F1",
+      "cursorColor": "#FFFFFF",
+      "selectionBackground": "#FFFFFF",
+      "black": "#121212",
+      "red": "#A52AFF",
+      "green": "#7129FF",
+      "yellow": "#3D2AFF",
+      "blue": "#2B4FFF",
+      "purple": "#2883FF",
+      "cyan": "#28B9FF",
+      "white": "#F1F1F1",
+      "brightBlack": "#666666",
+      "brightRed": "#BA5AFF",
+      "brightGreen": "#905AFF",
+      "brightYellow": "#685AFF",
+      "brightBlue": "#5C78FF",
+      "brightPurple": "#5EA2FF",
+      "brightCyan": "#5AC8FF",
+      "brightWhite": "#FFFFFF"
+    }
+  ],
+  "themes": [],
+  "useAcrylicInTabRow": true
+}
+

@@ -131,11 +131,4 @@ You can customize further:
 
 Feel free to copy or fork this! If you use this in your own dotfiles repo, crediting is appreciated but not required. 💙
 
-```
-
----
-
-Let me know if you'd like help writing your own `.omp.json` theme, uploading screenshots, or making this a **dotfiles** repo!
-```
-
 

@@ -37,7 +37,6 @@ windows-terminal-config/
 
 ## ⚙️ Features
 
-<<<<<<< HEAD
 - ✅ Minimal & clean interface
 - 🎨 Oh My Posh prompt with a futuristic look
 - ⚡ Fast directory navigation with Zoxide
@@ -52,7 +51,6 @@ windows-terminal-config/
 git clone https://github.com/lazy-blake/windows-terminal-config.git
 cd windows-terminal-config
 ```
->>>>>>> 4eb98b6350ccc1a305e7c9d236981ce2c66fd4b4
 
 ---
 
@@ -141,8 +139,6 @@ MIT License
 * [Zoxide](https://github.com/ajeetdsouza/zoxide)
 * [Terminal Icons](https://github.com/devblackops/Terminal-Icons)
 
-<<<<<<< HEAD
-```
 =======
 
 ---
@@ -151,5 +147,3 @@ MIT License
 
 Feel free to copy or fork this! If you use this in your own dotfiles repo, crediting is appreciated but not required. 💙
 
-
->>>>>>> 4eb98b6350ccc1a305e7c9d236981ce2c66fd4b4

@@ -122,7 +122,7 @@ Enjoy the clean GPU-accelerated terminal with transparency.
 
 ## 📸 Screenshots
 
-> *(Add your screenshot here)*
+> <img width="1915" height="1016" alt="image" src="https://github.com/user-attachments/assets/150097ed-9f9d-426d-aefa-2c96e52a677f" />
 
 ---
 

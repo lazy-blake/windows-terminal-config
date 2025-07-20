@@ -44,7 +44,7 @@ windows-terminal-config/
 - 🌈 Nerd Font support (e.g., FiraCode Nerd Font)
 - 🔒 Error-safe PowerShell profile
 - 🧊 Transparent and themed WezTerm UI
-=======
+
 ### 1. Clone This Repository
 
 ```bash

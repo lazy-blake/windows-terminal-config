@@ -1,129 +1,149 @@
+# ⚡ Windows Terminal + WezTerm Config
 
-# ⚡ Windows Terminal + PowerShell Custom Setup
+![PowerShell](https://img.shields.io/badge/PowerShell-7%2B-blue?logo=powershell&logoColor=white)
+![WezTerm](https://img.shields.io/badge/WezTerm-Custom%20Config-orange?logo=windows-terminal&logoColor=white)
+![Oh My Posh](https://img.shields.io/badge/Oh%20My%20Posh-Minimal%20Prompt-purple?logo=terminal&logoColor=white)
+![Zoxide](https://img.shields.io/badge/Zoxide-Fast%20Navigation-yellow?logo=zsh&logoColor=black)
+![Terminal Icons](https://img.shields.io/badge/Icons-Enabled-teal?logo=material-design&logoColor=white)
+![FiraCode](https://img.shields.io/badge/Font-FiraCode%20Nerd%20Font-9cf?logo=font&logoColor=black)
+![OS](https://img.shields.io/badge/OS-Windows%2011-lightgrey?logo=windows&logoColor=blue)
 
-This repository contains my fully customized setup for **Windows Terminal** and **PowerShell**, using:
 
-- 🎨 Custom color schemes (`xcad`, `Dracula`, etc.)
-- 🧠 [Oh My Posh](https://ohmyposh.dev) for a beautiful terminal prompt
-- 💠 [FiraCode Nerd Font](https://www.nerdfonts.com/font-downloads)
-- 📁 [Terminal-Icons](https://www.powershellgallery.com/packages/Terminal-Icons)
-- 📦 [zoxide](https://github.com/ajeetdsouza/zoxide) for fast directory jumping
-- 🍫 [Chocolatey tab-completions](https://ch0.co/tab-completion)
+A sleek and modern Windows Terminal configuration that transforms your CLI into a beautiful and productive environment. Powered by:
+
+- 🪟 Windows Terminal
+- 🧩 Oh My Posh (theme: `easy-term.omp.json`)
+- 🧙 PowerShell 7+
+- 🧭 Zoxide for fast directory jumping
+- 💄 Terminal Icons
+- 💎 WezTerm (optional, GPU-accelerated terminal)
 
 ---
 
-## 📁 File Structure
+## 📁 Repo Structure
 
-```bash
+```
+
 windows-terminal-config/
-├── settings.json                  # Windows Terminal appearance and layout
-├── Microsoft.PowerShell_profile.ps1  # PowerShell customizations
-├── README.md                      # You are here
+│
+├── Microsoft.PowerShell\_profile.ps1   # PowerShell startup config
+├── .wezterm.lua                        # WezTerm custom config
+├── easy-term.omp.json                 # Oh My Posh custom theme (optional)
+└── README.md
+
 ````
 
 ---
 
-## 🛠️ How to Set It Up (Step-by-Step)
+## ⚙️ Features
 
+<<<<<<< HEAD
+- ✅ Minimal & clean interface
+- 🎨 Oh My Posh prompt with a futuristic look
+- ⚡ Fast directory navigation with Zoxide
+- 🎨 Custom color scheme for WezTerm
+- 🌈 Nerd Font support (e.g., FiraCode Nerd Font)
+- 🔒 Error-safe PowerShell profile
+- 🧊 Transparent and themed WezTerm UI
+=======
 ### 1. Clone This Repository
 
 ```bash
 git clone https://github.com/lazy-blake/windows-terminal-config.git
 cd windows-terminal-config
 ```
+>>>>>>> 4eb98b6350ccc1a305e7c9d236981ce2c66fd4b4
 
 ---
 
-### 2. Install FiraCode Nerd Font
+## 🚀 Setup Instructions
 
-* Download and install from [Nerd Fonts → FiraCode](https://www.nerdfonts.com/font-downloads)
-* Set this font in Windows Terminal settings manually (or use the provided `settings.json`)
+### 1. Prerequisites
 
----
+- PowerShell 7+
+- Windows Terminal
+- [Oh My Posh](https://ohmyposh.dev/docs/installation)
+- [Zoxide](https://github.com/ajeetdsouza/zoxide)
+- [Terminal-Icons](https://github.com/devblackops/Terminal-Icons)
+- [WezTerm (optional)](https://wezfurlong.org/wezterm/install/)
 
-### 3. Install Required Tools
+### 2. Install Nerd Font
 
-Run each of these in **PowerShell as Administrator**:
+> Recommended: [FiraCode Nerd Font](https://www.nerdfonts.com/font-downloads)
 
-#### ➤ Install [Oh My Posh](https://ohmyposh.dev)
-
-```powershell
-winget install JanDeDobbeleer.OhMyPosh -s winget
-```
-
-#### ➤ Install [zoxide](https://github.com/ajeetdsouza/zoxide)
-
-```powershell
-winget install ajeetdsouza.zoxide -s winget
-```
-
-#### ➤ Install Terminal Icons
-
-```powershell
-Install-Module -Name Terminal-Icons -Repository PSGallery -Force
-```
-
-#### ➤ (Optional) Install Chocolatey (for tab-completion support)
-
-```powershell
-Set-ExecutionPolicy Bypass -Scope Process -Force
-[System.Net.ServicePointManager]::SecurityProtocol = 3072
-iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-```
+Install and set it as your terminal font.
 
 ---
 
-## ⚙️ Apply This Configuration
+### 3. Set Up PowerShell Profile
 
-### 📄 1. Apply PowerShell Profile
+Copy `Microsoft.PowerShell_profile.ps1` to:
+
+```powershell
+$PROFILE
+````
+
+You can open it with:
 
 ```powershell
 notepad $PROFILE
 ```
 
-* Paste everything from `Microsoft.PowerShell_profile.ps1` into that file and save.
+---
+
+### 4. Oh My Posh
+
+Install and configure Oh My Posh:
+
+```powershell
+winget install JanDeDobbeleer.OhMyPosh -s winget
+```
+
+Then link or place `easy-term.omp.json` in your `$env:POSH_THEMES_PATH`.
 
 ---
 
-### 🧱 2. Apply Windows Terminal Settings
+### 5. WezTerm (Optional)
 
-* Open Terminal > Click dropdown > `Settings`
-* In the editor, replace everything with the content of `settings.json`
+Copy `.wezterm.lua` to:
 
----
+```powershell
+C:\Users\<yourname>\.wezterm.lua
+```
 
-## 🧾 What's Included
-
-### Terminal Profiles:
-
-* PowerShell, CMD, Anaconda Prompt, VS Developer Shells
-
-### Color Schemes:
-
-* `xcad`, `Dracula`, `One Half Dark`, `Ciapre`
-
-### Key Bindings:
-
-* `Ctrl+C`, `Ctrl+V`, `Alt+Shift+D` (duplicate pane), etc.
+Enjoy the clean GPU-accelerated terminal with transparency.
 
 ---
 
-## 🙌 Credits & Inspiration
+## 🧠 Bonus
 
-* [Oh My Posh](https://ohmyposh.dev)
-* [zoxide](https://github.com/ajeetdsouza/zoxide)
-* [Nerd Fonts](https://www.nerdfonts.com/)
+* Use `Set-PSReadLineOption -PredictionSource History` for smart autosuggestions.
+* Enable `choco` tab completions with Chocolatey profile if installed.
+
+---
+
+## 📸 Screenshots
+
+> *(Add your screenshot here)*
+
+---
+
+## 📜 License
+
+MIT License
+
+---
+
+## 🙌 Credits
+
+* [WezTerm](https://wezfurlong.org/wezterm/)
+* [Oh My Posh](https://ohmyposh.dev/)
+* [Zoxide](https://github.com/ajeetdsouza/zoxide)
 * [Terminal Icons](https://github.com/devblackops/Terminal-Icons)
 
----
-
-## 🧠 Tip: Make Your Own!
-
-You can customize further:
-
-* Add more profiles (like WSL or Git Bash)
-* Use your own Oh My Posh theme (`.omp.json`)
-* Add auto-start commands or aliases in `$PROFILE`
+<<<<<<< HEAD
+```
+=======
 
 ---
 
@@ -132,3 +152,4 @@ You can customize further:
 Feel free to copy or fork this! If you use this in your own dotfiles repo, crediting is appreciated but not required. 💙
 
 
+>>>>>>> 4eb98b6350ccc1a305e7c9d236981ce2c66fd4b4

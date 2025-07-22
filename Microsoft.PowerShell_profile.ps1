@@ -1,7 +1,7 @@
 try {
     # --- Oh-My-Posh Initialization ---
     # Loads Oh My Posh theme safely using environment variable
-    $ompConfigPath = Join-Path $env:POSH_THEMES_PATH 'easy-term.omp.json'
+    $ompConfigPath = Join-Path $env:POSH_THEMES_PATH 'kushal.omp.json'
     if (Test-Path $ompConfigPath) {
         oh-my-posh init pwsh --config $ompConfigPath | Invoke-Expression
     }

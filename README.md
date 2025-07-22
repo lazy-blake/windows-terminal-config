@@ -44,7 +44,7 @@ windows-terminal-config/
 - 🌈 Nerd Font support (e.g., FiraCode Nerd Font)
 - 🔒 Error-safe PowerShell profile
 - 🧊 Transparent and themed WezTerm UI
-=======
+
 ### 1. Clone This Repository
 
 ```bash
@@ -120,9 +120,9 @@ Enjoy the clean GPU-accelerated terminal with transparency.
 
 ---
 
-## 📸 Screenshots
+## 📸 Preview
 
-> *(Add your screenshot here)*
+> <img width="1915" height="1016" alt="image" src="https://github.com/user-attachments/assets/150097ed-9f9d-426d-aefa-2c96e52a677f" />
 
 ---
 

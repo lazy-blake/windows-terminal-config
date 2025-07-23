@@ -116,9 +116,9 @@ C:\Users\<yourname>\.wezterm.lua
 
 ### 6. Winfetch
 
-Download Winfetch 
+- Download Winfetch 
 
-Ensure it's added to your system PATH
+- Ensure it's added to your system PATH
 
 📁 2. Place the Script in a Config Directory
 

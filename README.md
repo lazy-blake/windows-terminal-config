@@ -2,6 +2,7 @@
 
 ![PowerShell](https://img.shields.io/badge/PowerShell-7%2B-blue?logo=powershell&logoColor=white)
 ![WezTerm](https://img.shields.io/badge/WezTerm-Custom%20Config-orange?logo=windows-terminal&logoColor=white)
+![Winfetch](https://img.shields.io/badge/Winfetch-Aesthetic%20Info%20Display-cyan?logo=arch-linux&logoColor=white)
 ![Oh My Posh](https://img.shields.io/badge/Oh%20My%20Posh-Minimal%20Prompt-purple?logo=terminal&logoColor=white)
 ![Zoxide](https://img.shields.io/badge/Zoxide-Fast%20Navigation-yellow?logo=zsh&logoColor=black)
 ![Terminal Icons](https://img.shields.io/badge/Icons-Enabled-teal?logo=material-design&logoColor=white)
@@ -17,6 +18,7 @@ A sleek and modern Windows Terminal configuration that transforms your CLI into 
 - 🧭 Zoxide for fast directory jumping
 - 💄 Terminal Icons
 - 💎 WezTerm (optional, GPU-accelerated terminal)
+- 🌈 Winfetch for system stats and ASCII art at launch
 
 ---
 
@@ -29,6 +31,7 @@ windows-terminal-config/
 ├── Microsoft.PowerShell\_profile.ps1   # PowerShell startup config
 ├── .wezterm.lua                        # WezTerm custom config
 ├── easy-term.omp.json                 # Oh My Posh custom theme (optional)
+├── winfetch.ps1                        # Winfetch startup script
 └── README.md
 
 ````
@@ -41,6 +44,7 @@ windows-terminal-config/
 - 🎨 Oh My Posh prompt with a futuristic look
 - ⚡ Fast directory navigation with Zoxide
 - 🎨 Custom color scheme for WezTerm
+- 🖼️ Winfetch with custom ASCII + image
 - 🌈 Nerd Font support (e.g., FiraCode Nerd Font)
 - 🔒 Error-safe PowerShell profile
 - 🧊 Transparent and themed WezTerm UI
@@ -64,6 +68,7 @@ cd windows-terminal-config
 - [Zoxide](https://github.com/ajeetdsouza/zoxide)
 - [Terminal-Icons](https://github.com/devblackops/Terminal-Icons)
 - [WezTerm (optional)](https://wezfurlong.org/wezterm/install/)
+- [Winfetch](https://github.com/kiedtl/winfetch)
 
 ### 2. Install Nerd Font
 
@@ -108,6 +113,43 @@ Copy `.wezterm.lua` to:
 ```powershell
 C:\Users\<yourname>\.wezterm.lua
 ```
+
+### 6. Winfetch
+
+Download Winfetch 
+
+Ensure it's added to your system PATH
+
+📁 2. Place the Script in a Config Directory
+
+Move the script to this path (recommended):
+
+C:\Users\<your-username>\.config\winfetch\winfetch.ps1
+
+    💡 Create the folders manually if they don’t exist.
+
+⚙️ 3. Auto-run winfetch on Terminal Launch
+✅ For PowerShell:
+
+    Open PowerShell and run:
+
+notepad $PROFILE
+
+    Add this line at the bottom of the file:
+
+. "winfetch"
+
+    Save and restart your terminal.
+
+🛡️ 4. Allow Script Execution (If Needed)
+
+If your script doesn’t run, set execution policy once:
+
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+    ✅ Also run this to unblock the script file:
+
+Unblock-File "$HOME\.config\winfetch\winfetch.ps1"
 
 Enjoy the clean GPU-accelerated terminal with transparency.
 

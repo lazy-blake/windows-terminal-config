@@ -171,7 +171,7 @@ Enjoy the clean GPU-accelerated terminal with transparency.
 
 ## 📜 License
 
-MIT License
+This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
 
 ---
 
@@ -183,8 +183,4 @@ MIT License
 * [Terminal Icons](https://github.com/devblackops/Terminal-Icons)
 
 ---
-
-## 📬 License
-
-Feel free to copy or fork this! If you use this in your own dotfiles repo, crediting is appreciated but not required. 💙
 

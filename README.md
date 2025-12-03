@@ -1,333 +1,130 @@
-# ⚡ Windows Terminal + WezTerm Config
+# Windows Terminal Configuration
 
-![PowerShell](https://img.shields.io/badge/PowerShell-7%2B-blue?logo=powershell&logoColor=white)
-![WezTerm](https://img.shields.io/badge/WezTerm-Custom%20Config-orange?logo=windows-terminal&logoColor=white)
-![Oh My Posh](https://img.shields.io/badge/Oh%20My%20Posh-Minimal%20Prompt-purple?logo=terminal&logoColor=white)
-![Zoxide](https://img.shields.io/badge/Zoxide-Fast%20Navigation-yellow?logo=zsh&logoColor=black)
-![Terminal Icons](https://img.shields.io/badge/Icons-Enabled-teal?logo=material-design&logoColor=white)
-![FiraCode](https://img.shields.io/badge/Font-FiraCode%20Nerd%20Font-9cf?logo=font&logoColor=black)
-![OS](https://img.shields.io/badge/OS-Windows%2011-lightgrey?logo=windows&logoColor=blue)
+A clean and modern Windows Terminal setup for a beautiful and productive CLI experience.
 
-A sleek and modern Windows Terminal configuration that transforms your CLI into a beautiful and productive environment. Powered by:
+## Features
 
-- 🪟 Windows Terminal
-- 🧩 Oh My Posh (theme: `easy-term.omp.json`)
-- 🧙 PowerShell 7+
-- 🧭 Zoxide for fast directory jumping
-- 💄 Terminal Icons
-- 💎 WezTerm (optional, GPU-accelerated terminal)
-
----
-
-## 📁 Repo Structure
-
-```
-
-windows-terminal-config/
-│
-├── Microsoft.PowerShell\_profile.ps1   # PowerShell startup config
-├── .wezterm.lua                        # WezTerm custom config
-├── easy-term.omp.json                 # Oh My Posh custom theme (optional)
-└── README.md
-
-```
-
----
-
-## ⚙️ Features
-
-- ✅ Minimal & clean interface
-- 🎨 Oh My Posh prompt with a futuristic look
+- 🎨 Custom Oh My Posh theme with a sleek prompt
 - ⚡ Fast directory navigation with Zoxide
-- 🎨 Custom color scheme for WezTerm
-- 🌈 Nerd Font support (e.g., FiraCode Nerd Font)
-- 🔒 Error-safe PowerShell profile
-- 🧊 Transparent and themed WezTerm UI
+- 💄 Colorful file icons with Terminal-Icons
+- 🖼️ System info display with Fastfetch
+- 💎 Optional WezTerm configuration with GPU acceleration
+- 🌈 Nerd Font support for enhanced visuals
 
-### 1. Clone This Repository
+## What's Included
 
-```bash
+```
+windows-terminal-config/
+├── Microsoft.PowerShell_profile.ps1  # PowerShell config
+├── config.jsonc                      # Fastfetch config
+├── .wezterm.lua                      # WezTerm config (optional)
+|-- settings.json
+└── README.md
+```
+
+## Prerequisites
+
+- [PowerShell 7+](https://github.com/PowerShell/PowerShell)
+- [Windows Terminal](https://aka.ms/terminal)
+- [Oh My Posh](https://ohmyposh.dev/docs/installation)
+- [Zoxide](https://github.com/ajeetdsouza/zoxide)
+- [Terminal-Icons](https://github.com/devblackops/Terminal-Icons)
+- [Fastfetch](https://github.com/fastfetch-cli/fastfetch)
+- [FiraCode Nerd Font](https://www.nerdfonts.com/font-downloads) (recommended)
+- [WezTerm](https://wezfurlong.org/wezterm/install/) (optional)
+
+## Installation
+
+### 1. Clone the Repository
+
+```powershell
 git clone https://github.com/lazy-blake/windows-terminal-config.git
 cd windows-terminal-config
 ```
 
----
+### 2. Install Dependencies
 
-## 🚀 Setup Instructions
+```powershell
+# Install Oh My Posh
+winget install JanDeDobbeleer.OhMyPosh
 
-### 1. Prerequisites
+# Install Zoxide
+winget install ajeetdsouza.zoxide
 
-- PowerShell 7+
-- Windows Terminal
-- [Oh My Posh](https://ohmyposh.dev/docs/installation)
-- [Zoxide](https://github.com/ajeetdsouza/zoxide)
-- [Terminal-Icons](https://github.com/devblackops/Terminal-Icons)
-- [WezTerm (optional)](https://wezfurlong.org/wezterm/install/)
+# Install Terminal-Icons
+Install-Module -Name Terminal-Icons -Repository PSGallery
 
-### 2. Install Nerd Font
-
-> Recommended: [FiraCode Nerd Font](https://www.nerdfonts.com/font-downloads)
-
-Install and set it as your terminal font.
-
----
+# Install Fastfetch
+winget install Fastfetch-cli.Fastfetch
+```
 
 ### 3. Set Up PowerShell Profile
 
-Copy `Microsoft.PowerShell_profile.ps1` to:
+Copy the PowerShell profile to your profile location:
 
 ```powershell
-$PROFILE
+# Check your profile path
+echo $PROFILE
+
+# Copy the profile
+Copy-Item Microsoft.PowerShell_profile.ps1 $PROFILE
 ```
 
-You can open it with:
-
-```powershell
-notepad $PROFILE
-```
-
----
-
-### 4. Oh My Posh
-
-Install and configure Oh My Posh:
-
-```powershell
-winget install JanDeDobbeleer.OhMyPosh -s winget
-```
-
-Then link or place `easy-term.omp.json` in your `$env:POSH_THEMES_PATH`.
-
----
-
-### 5. WezTerm (Optional)
-
-Copy `.wezterm.lua` to:
-
-```powershell
-C:\Users\<yourname>\.wezterm.lua
-```
-
-Enjoy the clean GPU-accelerated terminal with transparency.
-
----
-
-## 🧠 Bonus
-
-- Use `Set-PSReadLineOption -PredictionSource History` for smart autosuggestions.
-- Enable `choco` tab completions with Chocolatey profile if installed.
-
----
-
-## 📸 Preview
-
-> <img width="1915" height="1016" alt="image" src="https://github.com/user-attachments/assets/150097ed-9f9d-426d-aefa-2c96e52a677f" />
-
----
-
-## 📜 License
-
-MIT License
-
----
-
-## 🙌 Credits
-
-- [WezTerm](https://wezfurlong.org/wezterm/)
-- [Oh My Posh](https://ohmyposh.dev/)
-- [Zoxide](https://github.com/ajeetdsouza/zoxide)
-- [Terminal Icons](https://github.com/devblackops/Terminal-Icons)
-
----
-
-## 📬 License
-
-Feel free to copy or fork this! If you use this in your own dotfiles repo, crediting is appreciated but not required. 💙
-
-=======
-
-# ⚡ Windows Terminal + WezTerm Config
-
-![PowerShell](https://img.shields.io/badge/PowerShell-7%2B-blue?logo=powershell&logoColor=white)
-![WezTerm](https://img.shields.io/badge/WezTerm-Custom%20Config-orange?logo=windows-terminal&logoColor=white)
-![Winfetch](https://img.shields.io/badge/Winfetch-Aesthetic%20Info%20Display-cyan?logo=arch-linux&logoColor=white)
-![Oh My Posh](https://img.shields.io/badge/Oh%20My%20Posh-Minimal%20Prompt-purple?logo=terminal&logoColor=white)
-![Zoxide](https://img.shields.io/badge/Zoxide-Fast%20Navigation-yellow?logo=zsh&logoColor=black)
-![Terminal Icons](https://img.shields.io/badge/Icons-Enabled-teal?logo=material-design&logoColor=white)
-![FiraCode](https://img.shields.io/badge/Font-FiraCode%20Nerd%20Font-9cf?logo=font&logoColor=black)
-![OS](https://img.shields.io/badge/OS-Windows%2011-lightgrey?logo=windows&logoColor=blue)
-
-A sleek and modern Windows Terminal configuration that transforms your CLI into a beautiful and productive environment. Powered by:
-
-- 🪟 Windows Terminal
-- 🧩 Oh My Posh (theme: `easy-term.omp.json`)
-- 🧙 PowerShell 7+
-- 🧭 Zoxide for fast directory jumping
-- 💄 Terminal Icons
-- 💎 WezTerm (optional, GPU-accelerated terminal)
-- 🌈 Winfetch for system stats and ASCII art at launch
-
----
-
-## 📁 Repo Structure
-
-```
-
-windows-terminal-config/
-│
-├── Microsoft.PowerShell\_profile.ps1   # PowerShell startup config
-├── .wezterm.lua                        # WezTerm custom config
-├── easy-term.omp.json                 # Oh My Posh custom theme (optional)
-├── winfetch.ps1                        # Winfetch startup script
-└── README.md
-
-```
-
----
-
-## ⚙️ Features
-
-- ✅ Minimal & clean interface
-- 🎨 Oh My Posh prompt with a futuristic look
-- ⚡ Fast directory navigation with Zoxide
-- 🎨 Custom color scheme for WezTerm
-- 🖼️ Winfetch with custom ASCII + image
-- 🌈 Nerd Font support (e.g., FiraCode Nerd Font)
-- 🔒 Error-safe PowerShell profile
-- 🧊 Transparent and themed WezTerm UI
-
-### 1. Clone This Repository
-
-```bash
-git clone https://github.com/lazy-blake/windows-terminal-config.git
-cd windows-terminal-config
-```
-
----
-
-## 🚀 Setup Instructions
-
-### 1. Prerequisites
-
-- PowerShell 7+
-- Windows Terminal
-- [Oh My Posh](https://ohmyposh.dev/docs/installation)
-- [Zoxide](https://github.com/ajeetdsouza/zoxide)
-- [Terminal-Icons](https://github.com/devblackops/Terminal-Icons)
-- [WezTerm (optional)](https://wezfurlong.org/wezterm/install/)
-- [Winfetch](https://github.com/kiedtl/winfetch)
-
-### 2. Install Nerd Font
-
-> Recommended: [FiraCode Nerd Font](https://www.nerdfonts.com/font-downloads)
-
-Install and set it as your terminal font.
-
----
-
-### 3. Set Up PowerShell Profile
-
-Copy `Microsoft.PowerShell_profile.ps1` to:
-
-```powershell
-$PROFILE
-```
-
-You can open it with:
+Or manually copy the contents:
 
 ```powershell
 notepad $PROFILE
 ```
 
----
+### 4. Set Up WezTerm (Optional)
 
-### 4. Oh My Posh
-
-Install and configure Oh My Posh:
+If using WezTerm, copy the configuration file:
 
 ```powershell
-winget install JanDeDobbeleer.OhMyPosh -s winget
+Copy-Item .wezterm.lua $HOME\.wezterm.lua
 ```
 
-Then link or place `easy-term.omp.json` in your `$env:POSH_THEMES_PATH`.
+### 5. Install Nerd Font
 
----
+Download and install [FiraCode Nerd Font](https://www.nerdfonts.com/font-downloads), then set it as your terminal font in Windows Terminal or WezTerm settings.
 
-### 5. WezTerm (Optional)
+## Usage
 
-Copy `.wezterm.lua` to:
+After installation, restart your terminal. You should see:
+
+- Fastfetch system information on startup
+- A custom Oh My Posh prompt
+- Colorful file icons when listing directories
+- Fast directory jumping with `z` command
+
+### Quick Commands
 
 ```powershell
-C:\Users\<yourname>\.wezterm.lua
+# Jump to a directory you've visited before
+z documents
+
+# List directory with icons
+ls
 ```
 
-### 6. Winfetch
+## Customization
 
-- Download Winfetch
+- Edit `Microsoft.PowerShell_profile.ps1` to modify your shell behavior
+- Modify `.wezterm.lua` for WezTerm-specific settings
+- Configure Fastfetch by creating `~/.config/fastfetch/config.jsonc`
 
-- Ensure it's added to your system PATH
+## Troubleshooting
 
-📁 2. Place the Script in a Config Directory
+If scripts don't run, you may need to adjust the execution policy:
 
-Move the script to this path (recommended):
-
-C:\Users\<your-username>\.config\winfetch\winfetch.ps1
-
-    💡 Create the folders manually if they don’t exist.
-
-⚙️ 3. Auto-run winfetch on Terminal Launch
-✅ For PowerShell:
-
-    Open PowerShell and run:
-
-notepad $PROFILE
-
-    Add this line at the bottom of the file:
-
-. "winfetch"
-
-    Save and restart your terminal.
-
-🛡️ 4. Allow Script Execution (If Needed)
-
-If your script doesn’t run, set execution policy once:
-
+```powershell
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
 
-    ✅ Also run this to unblock the script file:
+## License
 
-Unblock-File "$HOME\.config\winfetch\winfetch.ps1"
-
-Enjoy the clean GPU-accelerated terminal with transparency.
-
----
-
-## 🧠 Bonus
-
-- Use `Set-PSReadLineOption -PredictionSource History` for smart autosuggestions.
-- Enable `choco` tab completions with Chocolatey profile if installed.
+MIT License - Feel free to use and modify as you wish!
 
 ---
 
-## 📸 Preview
-
-> <img width="1919" height="1024" alt="image" src="https://github.com/user-attachments/assets/89a139f2-66d6-4bad-8eec-ab66220c4dc3" />
-
----
-
-## 📜 License
-
-This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
-
----
-
-## 🙌 Credits
-
-- [WezTerm](https://wezfurlong.org/wezterm/)
-- [Oh My Posh](https://ohmyposh.dev/)
-- [Zoxide](https://github.com/ajeetdsouza/zoxide)
-- [Terminal Icons](https://github.com/devblackops/Terminal-Icons)
-
----
-
-> > > > > > > 6d68a99e2a6f3ce0c5917944529d94897c112fd8
+If you found this helpful, consider starring the repo ⭐
